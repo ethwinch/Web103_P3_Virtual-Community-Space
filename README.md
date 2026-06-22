@@ -16,8 +16,8 @@ The following **required** functionality is completed:
 - [ ] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
   - [ ]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
   - [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
-- [ ] **The web app displays a title.**
-- [ ] **Website includes a visual interface that allows users to select a location they would like to view.**
+- [X] **The web app displays a title.**
+- [X] **Website includes a visual interface that allows users to select a location they would like to view.**
   - [ ] *Note: A non-visual list of links to different locations is insufficient.* 
 - [ ] **Each location has a detail page with its own unique URL.**
 - [ ] **Clicking on a location navigates to its corresponding detail page and displays list of all events from the `events` table associated with that location.**
@@ -52,7 +52,7 @@ Describe any challenges encountered while building the app or any additional con
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright 2026 Ethan Winch
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
