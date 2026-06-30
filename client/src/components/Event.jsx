@@ -1,48 +1,51 @@
 import React, { useState, useEffect } from 'react'
 import '../css/Event.css'
 
+import EventsAPI from '../services/EventsAPI'
+import dates from '../services/dates.js'
+
 const Event = (props) => {
 
-    const [event, setEvent] = useState([])
-    const [time, setTime] = useState([])
+    const [event, setEvent] = useState(props.id)
+    const [time, setTime] = useState(props.time)
     const [remaining, setRemaining] = useState([])
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const eventData = await EventsAPI.getEventsById(props.id)
-                setEvent(eventData)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [])
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const eventData = await EventsAPI.getEventsById(props.id)
+    //             setEvent(eventData)
+    //         }
+    //         catch (error) {
+    //             throw error
+    //         }
+    //     }) ()
+    // }, [])
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const result = await dates.formatTime(event.time)
-                setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const result = await dates.formatTime(event.time)
+    //             setTime(result)
+    //         }
+    //         catch (error) {
+    //             throw error
+    //         }
+    //     }) ()
+    // }, [event])
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
-                setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const timeRemaining = await dates.formatRemainingTime(event.remaining)
+    //             setRemaining(timeRemaining)
+    //             dates.formatNegativeTimeRemaining(remaining, event.id)
+    //         }
+    //         catch (error) {
+    //             throw error
+    //         }
+    //     }) ()
+    // }, [event])
 
     return (
         <article className='event-information'>

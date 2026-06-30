@@ -28,8 +28,8 @@ else if (process.env.NODE_ENV === 'production') {
 }
 
 // specify the api path for the server to use
-app.use('/api/locations', eventsRouter)
-app.use('/api/events', locationRouter)
+app.use('/api/locations', locationRouter)
+app.use('/api/events', eventsRouter)
 
 
 if (process.env.NODE_ENV === 'production') {
